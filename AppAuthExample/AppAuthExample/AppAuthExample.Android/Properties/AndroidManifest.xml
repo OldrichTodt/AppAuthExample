@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname" xmlns:tools="http://schemas.android.com/tools">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+  <application android:label="AppAuthExample.Android">
+    <activity
+      android:name="net.openid.appauth.RedirectUriReceiverActivity"
+      tools:node="replace">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https"
+              android:host="example.com"
+              android:path="/oauth2redirect" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>
